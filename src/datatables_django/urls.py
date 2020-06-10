@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from pages.views import homepage_view
+from soda.views import soda_detail_view
 
 urlpatterns = [
     path('', homepage_view, name='home'),
+    path('soda/', soda_detail_view),
     path('admin/', admin.site.urls),
 ]
