@@ -10,7 +10,9 @@ def soda_detail_view(request):
   for values in queryset:
     result.append(list(values.values())[1::])
     
-  context = {
-    'sodas': result
-  }
-  return render(request, "soda.html", context)
+  # context = {
+  #   'sodas': result
+  # }
+  # return render(request, "soda.html", context)
+
+  return JsonResponse(list(queryset), safe=False)

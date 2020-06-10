@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from pages.views import home_page_view
 from soda.views import soda_detail_view
 
 urlpatterns = [
-    path('', soda_detail_view),
+    path('', home_page_view),
+    path('api/v1/sodas/', soda_detail_view),
     path('admin/', admin.site.urls),
 ]
