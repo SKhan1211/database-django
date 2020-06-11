@@ -33,6 +33,15 @@ $.ajax({
         { title: "Time" },
         { title: "Errors" },
       ],
+      "createdRow": function (row, data, dataIndex) {
+        if (data[6] == "GREEN") {
+          $(row).addClass('green');
+        } else if (data[6] == "INPROGRESS") {
+          $(row).addClass('yellow');
+        } else if (data[6] == "BLUE") {
+          $(row).addClass('blue');
+        }
+      },
     });
   });
 });
