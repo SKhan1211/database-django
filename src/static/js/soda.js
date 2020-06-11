@@ -11,6 +11,10 @@ $.ajax({
           className: "select-checkbox",
           targets: 0,
         },
+        {
+          className: "dt-body-center",
+          targets: [1, 2, 3, 4, 5, 6, 7, 8],
+        }
       ],
       select: {
         style: "multi",
